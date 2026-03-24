@@ -74,7 +74,7 @@ export default function Home() {
       {/* 功能入口 */}
       <section className="px-6 py-12 max-w-4xl mx-auto w-full">
         <h2 className="text-xl font-bold mb-6 text-center">更多玩法</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-3 md:grid-cols-5 gap-3">
           <Link href="/seren" className="p-4 rounded-xl border border-purple-900/50 bg-purple-950/30 hover:bg-purple-900/50 transition-all text-center hover:scale-105">
             <div className="text-2xl mb-1">🦇</div>
             <div className="text-sm font-medium">東雪蓮資料</div>
@@ -86,6 +86,10 @@ export default function Home() {
           <Link href="/versus" className="p-4 rounded-xl border border-purple-900/50 bg-purple-950/30 hover:bg-purple-900/50 transition-all text-center hover:scale-105">
             <div className="text-2xl mb-1">⚡</div>
             <div className="text-sm font-medium">數據對決</div>
+          </Link>
+          <Link href="/stats" className="p-4 rounded-xl border border-purple-900/50 bg-purple-950/30 hover:bg-purple-900/50 transition-all text-center hover:scale-105">
+            <div className="text-2xl mb-1">📊</div>
+            <div className="text-sm font-medium">粉絲統計</div>
           </Link>
           <Link href="/hall-of-fame" className="p-4 rounded-xl border border-purple-900/50 bg-purple-950/30 hover:bg-purple-900/50 transition-all text-center hover:scale-105">
             <div className="text-2xl mb-1">🏆</div>
@@ -100,7 +104,7 @@ export default function Home() {
             <div className="text-sm font-medium">塔菲對答遊戲</div>
           </Link>
           <Link href="/leaderboard" className="p-4 rounded-xl border border-purple-900/50 bg-purple-950/30 hover:bg-purple-900/50 transition-all text-center hover:scale-105">
-            <div className="text-2xl mb-1">📊</div>
+            <div className="text-2xl mb-1">🥇</div>
             <div className="text-sm font-medium">全球排行榜</div>
           </Link>
           <Link href="/about" className="p-4 rounded-xl border border-purple-900/50 bg-purple-950/30 hover:bg-purple-900/50 transition-all text-center hover:scale-105">
