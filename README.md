@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 東雪蓮大戰塔菲 ⚡ 粉絲互動樂園
 
-## Getting Started
+以虛擬主播**東雪蓮**與**永雛塔菲**為主題的粉絲互動網站。
 
-First, run the development server:
+## 🌸  功能一覽
+
+| 頁面 | 網址 | 說明 |
+|------|------|------|
+| 首頁 | `/` | 對決入口，角色卡片 |
+| 人格測驗 | `/quiz` | 你是雪蓮派？塔菲派？両辺の生き物？ |
+| 投票對決 | `/battle` | 兩邊粉絲實時投票 |
+| 殿堂排行榜 | `/hall-of-fame` | 粉絲提名最愛金句，投票排行 |
+| 角色資料 | `/seren` | 東雪蓮詳細頁 |
+| 角色資料 | `/taffy` | 永雛塔菲詳細頁 |
+| 數據對決 | `/versus` | 兩位角色各項數據比較 |
+| 雪蓮遊戲 | `/games/seren` | 暈血反應速度挑戰 |
+| 塔菲遊戲 | `/games/taffy` | 塔菲知識對答 |
+| 全球排行榜 | `/leaderboard` | 遊戲分數世界排名 |
+| 關於 | `/about` | 關於本站 |
+
+## 🛠️  本地開發
 
 ```bash
+npm install
+npx prisma generate
+npx prisma migrate dev
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀  部署到 Vercel
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Fork 或 push 到 GitHub
+2. 在 Vercel Import 頁選這個 repo
+3. Vercel 會自動偵測 Next.js 專案
+4. Deploy！
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+> 注意：SQLite 資料庫（dev.db）不會被 deploy，留言/投票資料在正式環境需要另外設定 PostgreSQL 或切換到 Turso/Neon 等 SQLite 托管服務。
 
-## Learn More
+##  ⚙️  環境變數
 
-To learn more about Next.js, take a look at the following resources:
+```env
+DATABASE_URL="file:./dev.db"
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+##  技術棧
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Framework:** Next.js 16 (App Router)
+- **ORM:** Prisma 5 + SQLite
+- **樣式:** Tailwind CSS
+- **托管:** Vercel
 
-## Deploy on Vercel
+##  授權
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+本網站與東雪蓮、永雛塔菲及其經紀公司沒有任何官方關係。內容由粉絲基於公開資料製作，純屬愛好分享。
