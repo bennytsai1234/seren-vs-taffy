@@ -71,6 +71,30 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Featured Quote */}
+      <section className="px-6 py-10 max-w-4xl mx-auto w-full border-t border-purple-900/30">
+        <div className="text-center mb-6">
+          <h2 className="text-xl font-bold">💬 殿堂精選語錄</h2>
+        </div>
+        <div className="grid md:grid-cols-2 gap-4">
+          <div className="p-4 rounded-xl border border-[#7c3aed]/30 bg-[#7c3aed]/10">
+            <p className="text-sm italic mb-2 opacity-80">「清楚了！」</p>
+            <p className="text-xs opacity-50">— 東雪蓮直播口頭禪</p>
+            <p className="text-xs text-[#a78bfa] mt-2"># 東雪蓮殿堂 · 88票</p>
+          </div>
+          <div className="p-4 rounded-xl border border-[#f59e0b]/30 bg-[#f59e0b]/10">
+            <p className="text-sm italic mb-2 opacity-80">「王牌！」</p>
+            <p className="text-xs opacity-50">— 永雛塔菲直播口頭禪</p>
+            <p className="text-xs text-[#f59e0b] mt-2"># 永雛塔菲殿堂 · 92票</p>
+          </div>
+        </div>
+        <div className="text-center mt-4">
+          <Link href="/hall-of-fame" className="text-sm opacity-60 hover:opacity-100 transition-opacity underline underline-offset-4">
+            查看完整排行榜 →
+          </Link>
+        </div>
+      </section>
+
       {/* 功能入口 */}
       <section className="px-6 py-12 max-w-4xl mx-auto w-full">
         <h2 className="text-xl font-bold mb-6 text-center">更多玩法</h2>
