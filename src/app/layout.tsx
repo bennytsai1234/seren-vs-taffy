@@ -29,9 +29,9 @@ export default function RootLayout({
           </a>
           <div className="flex gap-4 text-sm font-medium">
             <a href="/quiz" className="hover:text-[#a78bfa] transition-colors">測驗</a>
-            <a href="/battle" className="hover:text-[#a78bfa] transition-colors">投票對決</a>
+            <a href="/battle" className="hover:text-[#a78bfa] transition-colors">投票</a>
+            <a href="/stats" className="hover:text-[#a78bfa] transition-colors">📊</a>
             <a href="/hall-of-fame" className="hover:text-[#a78bfa] transition-colors">殿堂</a>
-            <a href="/games/seren" className="hover:text-[#a78bfa] transition-colors">遊戲</a>
             <a href="/versus" className="hover:text-[#a78bfa] transition-colors">對決</a>
             <a href="/leaderboard" className="hover:text-[#a78bfa] transition-colors">🏆</a>
             <a href="/about" className="hover:text-[#a78bfa] transition-colors">ℹ️</a>
