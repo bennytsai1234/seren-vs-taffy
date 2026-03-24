@@ -113,12 +113,21 @@ export default function QuizPage() {
   const [step, setStep] = useState(0);
   const [scores, setScores] = useState({ seren: 0, taffy: 0, both: 0 });
   const [finished, setFinished] = useState(false);
+  const [confetti, setConfetti] = useState<Array<{ id: number; x: number; color: string; delay: number }>>([]);
 
   const handleAnswer = (score: string) => {
     const newScores = { ...scores, [score]: scores[score as keyof typeof scores] + 1 };
     setScores(newScores);
     if (step + 1 >= questions.length) {
       setFinished(true);
+      // trigger confetti
+      const particles = Array.from({ length: 60 }, (_, i) => ({
+        id: i,
+        x: Math.random() * 100,
+        color: ["#7c3aed", "#f59e0b", "#3b82f6", "#ef4444", "#fcd34d", "#a78bfa"][Math.floor(Math.random() * 6)],
+        delay: Math.random() * 0.8,
+      }));
+      setConfetti(particles);
       // save to API
       const resultType = Object.entries(newScores).reduce((a, b) => (b[1] > a[1] ? b : a))[0];
       fetch("/api/quiz", {
@@ -145,8 +154,23 @@ export default function QuizPage() {
   if (finished) {
     const result = getResult();
     return (
-      <div className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-16">
-        <div className="text-center animate-slide-up">
+      <div className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-16 relative overflow-hidden">
+        {/* Confetti */}
+        <div className="absolute inset-0 pointer-events-none z-30">
+          {confetti.map((c) => (
+            <div
+              key={c.id}
+              className="absolute w-2 h-2 rounded-full"
+              style={{
+                left: `${c.x}%`,
+                top: "-10px",
+                background: c.color,
+                animation: `confetti-fall 2.5s ease-in ${c.delay}s forwards`,
+              }}
+            />
+          ))}
+        </div>
+        <div className="text-center animate-slide-up relative z-10">
           <div className={`inline-block text-8xl mb-4 p-6 rounded-full bg-gradient-to-br ${result.color}`}>
             {result.emoji}
           </div>
