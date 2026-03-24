@@ -187,6 +187,14 @@ export default function QuizPage() {
               分享到 Twitter
             </a>
             <button
+              onClick={() => {
+                navigator.clipboard.writeText(window.location.href).catch(() => {});
+              }}
+              className="px-6 py-3 rounded-full border border-white/30 font-bold hover:bg-white/10 transition-all"
+            >
+              複製連結
+            </button>
+            <button
               onClick={() => { setStep(0); setScores({ seren: 0, taffy: 0, both: 0 }); setFinished(false); }}
               className="px-6 py-3 rounded-full border border-white/30 font-bold hover:bg-white/10 transition-all"
             >
