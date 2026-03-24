@@ -4,7 +4,6 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "東雪蓮大戰塔菲 ⚡ 粉絲互動樂園",
   description: "你是雪蓮派還是塔菲派？測驗、投票、遊戲，這裡是兩邊粉絲的樂園！",
-  icons: { icon: "/favicon.svg" },
 };
 
 export const viewport = {
@@ -20,6 +19,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh-Hant" className="dark">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+      </head>
       <body className="min-h-screen flex flex-col bg-[#0f0a1a] text-[#f0e8ff]">
         <nav className="flex items-center justify-between px-6 py-4 border-b border-purple-900/50 backdrop-blur-sm bg-[#0f0a1a]/80 sticky top-0 z-50">
           <a href="/" className="text-xl font-black tracking-tight">
