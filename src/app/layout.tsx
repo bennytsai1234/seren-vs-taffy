@@ -4,6 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "東雪蓮大戰塔菲 ⚡ 粉絲互動樂園",
   description: "你是雪蓮派還是塔菲派？測驗、投票、遊戲，這裡是兩邊粉絲的樂園！",
+  icons: { icon: "/favicon.svg" },
 };
 
 export const viewport = {

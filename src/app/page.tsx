@@ -6,8 +6,23 @@ export default function Home() {
       {/* Hero */}
       <section className="flex-1 flex flex-col items-center justify-center px-4 py-16 relative overflow-hidden">
         {/* VS 背景裝飾 */}
-        <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[200px] font-black opacity-5 select-none">VS</div>
+          {/* Floating particles */}
+          {[...Array(12)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-1 h-1 rounded-full animate-float"
+              style={{
+                background: i % 2 === 0 ? "#7c3aed" : "#f59e0b",
+                left: `${(i * 8) % 100}%`,
+                top: `${(i * 13) % 100}%`,
+                opacity: 0.3,
+                animationDelay: `${i * 0.3}s`,
+                animationDuration: `${3 + (i % 3)}s`,
+              }}
+            />
+          ))}
         </div>
 
         <h1 className="text-4xl sm:text-6xl md:text-7xl font-black text-center mb-4 tracking-tight relative z-10">
