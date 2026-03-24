@@ -2,7 +2,9 @@ export default function SerenPage() {
   return (
     <div className="min-h-[80vh] px-4 py-16 max-w-3xl mx-auto">
       <div className="text-center mb-10">
-        <div className="text-8xl mb-4">🦇</div>
+        <div className="relative inline-block mb-4">
+          <img src="/images/seren-character.svg" alt="東雪蓮" className="w-52 h-52 object-contain mx-auto" />
+        </div>
         <h1 className="text-5xl font-black text-[#a78bfa] mb-2">東雪蓮</h1>
         <p className="text-lg opacity-60">Azuma Seren · 清楚吸血鬼歌姬</p>
       </div>

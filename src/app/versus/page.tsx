@@ -1,7 +1,5 @@
 "use client";
 
-import { useState, useEffect } from "react";
-
 const stats = [
   {
     label: "出道年份",
@@ -70,10 +68,13 @@ const stats = [
 ];
 
 export default function VersusPage() {
-  const [revealed, setRevealed] = useState(false);
-
   return (
     <div className="min-h-[80vh] px-4 py-16 max-w-4xl mx-auto">
+      {/* Hero visual */}
+      <div className="relative mb-8 rounded-3xl overflow-hidden border border-white/10">
+        <img src="/images/hero-vs.svg" alt="東雪蓮 vs 永雛塔菲" className="w-full object-contain" style={{maxHeight: "200px"}} />
+      </div>
+
       <div className="text-center mb-10">
         <h1 className="text-4xl font-black mb-2">
           <span className="text-[#a78bfa]">東雪蓮</span>
@@ -84,17 +85,17 @@ export default function VersusPage() {
         <p className="text-xs opacity-30 mt-2">以下數據來自公開資料統計，非官方數據</p>
       </div>
 
-      {/* VS Header */}
+      {/* VS Header with character images */}
       <div className="grid grid-cols-3 gap-4 mb-8 items-center">
         <div className="text-right">
-          <div className="text-5xl">🦇</div>
+          <img src="/images/seren-character.svg" alt="東雪蓮" className="w-24 h-24 object-contain mx-auto" />
           <div className="font-black text-[#a78bfa] mt-1">東雪蓮</div>
         </div>
         <div className="text-center">
-          <div className="text-4xl font-black text-yellow-400 animate-vs-shake">VS</div>
+          <div className="text-4xl font-black text-yellow-400 animate-vs-shake">⚡ VS ⚡</div>
         </div>
         <div className="text-left">
-          <div className="text-5xl">🧪</div>
+          <img src="/images/taffy-character.svg" alt="永雛塔菲" className="w-24 h-24 object-contain mx-auto" />
           <div className="font-black text-[#f59e0b] mt-1">永雛塔菲</div>
         </div>
       </div>

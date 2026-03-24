@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#2d1b69"/>
+      <stop offset="100%" stop-color="#0f0a1a"/>
+    </radialGradient>
+    <linearGradient id="dress" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="50%" stop-color="#6d28d9"/>
+      <stop offset="100%" stop-color="#5b21b6"/>
+    </linearGradient>
+    <linearGradient id="hair" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="eyes" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c4b5fd"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="peony" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f472b6"/>
+      <stop offset="50%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#db2777"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="400" fill="url(#bg)" rx="20"/>
+
+  <!-- Ambient glow -->
+  <ellipse cx="200" cy="180" rx="120" ry="140" fill="#7c3aed" opacity="0.08" filter="url(#softGlow)"/>
+
+  <!-- Character: Upper body silhouette -->
+  <g transform="translate(200, 200)">
+
+    <!-- Hair back -->
+    <ellipse cx="0" cy="-40" rx="95" ry="100" fill="url(#hair)" opacity="0.9"/>
+
+    <!-- Face -->
+    <ellipse cx="0" cy="-30" rx="72" ry="82" fill="#f5f0ff"/>
+
+    <!-- Blush -->
+    <ellipse cx="-40" cy="0" rx="18" ry="10" fill="#f9a8d4" opacity="0.4"/>
+    <ellipse cx="40" cy="0" rx="18" ry="10" fill="#f9a8d4" opacity="0.4"/>
+
+    <!-- Eyes -->
+    <g filter="url(#glow)">
+      <!-- Left eye -->
+      <ellipse cx="-28" cy="-35" rx="22" ry="26" fill="url(#eyes)"/>
+      <ellipse cx="-28" cy="-35" rx="16" ry="20" fill="#1e1b4b"/>
+      <ellipse cx="-28" cy="-35" rx="8" ry="10" fill="#c4b5fd"/>
+      <ellipse cx="-22" cy="-42" rx="6" ry="7" fill="white" opacity="0.9"/>
+      <!-- Right eye -->
+      <ellipse cx="28" cy="-35" rx="22" ry="26" fill="url(#eyes)"/>
+      <ellipse cx="28" cy="-35" rx="16" ry="20" fill="#1e1b4b"/>
+      <ellipse cx="28" cy="-35" rx="8" ry="10" fill="#c4b5fd"/>
+      <ellipse cx="34" cy="-42" rx="6" ry="7" fill="white" opacity="0.9"/>
+    </g>
+
+    <!-- Eyebrows -->
+    <path d="M-48,-65 Q-28,-72 -8,-65" stroke="#8b5cf6" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M8,-65 Q28,-72 48,-65" stroke="#8b5cf6" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Nose -->
+    <path d="M0,-10 Q4,-5 0,0 Q-4,-5 0,-10" fill="#e9d5ff" opacity="0.6"/>
+
+    <!-- Mouth with fangs -->
+    <path d="M-15,15 Q0,22 15,15" stroke="#c4b5fd" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Fangs -->
+    <path d="M-12,15 L-10,24 L-8,15" fill="white"/>
+    <path d="M8,15 L10,24 L12,15" fill="white"/>
+
+    <!-- Hair front bangs -->
+    <path d="M-72,-90 Q-60,-130 -40,-90 Q-20,-120 0,-85 Q20,-115 40,-90 Q60,-130 72,-90 Q50,-50 0,-55 Q-50,-50 -72,-90Z" fill="url(#hair)"/>
+
+    <!-- Side hair -->
+    <path d="M-72,-80 Q-90,-20 -85,30 Q-80,60 -70,80 Q-60,40 -65,0 Q-60,-40 -72,-80Z" fill="url(#hair)"/>
+    <path d="M72,-80 Q90,-20 85,30 Q80,60 70,80 Q60,40 65,0 Q60,-40 72,-80Z" fill="url(#hair)"/>
+
+    <!-- Peony flower on head -->
+    <g transform="translate(0,-120)">
+      <!-- Flower petals -->
+      <ellipse cx="0" cy="-18" rx="16" ry="20" fill="url(#peony)" transform="rotate(0)"/>
+      <ellipse cx="0" cy="-18" rx="16" ry="20" fill="url(#peony)" transform="rotate(45)"/>
+      <ellipse cx="0" cy="-18" rx="16" ry="20" fill="url(#peony)" transform="rotate(90)"/>
+      <ellipse cx="0" cy="-18" rx="16" ry="20" fill="url(#peony)" transform="rotate(135)"/>
+      <!-- Center -->
+      <circle cx="0" cy="0" r="10" fill="#fcd34d"/>
+      <circle cx="0" cy="0" r="5" fill="#f59e0b"/>
+    </g>
+
+    <!-- Dress / clothes upper -->
+    <path d="M-60,90 Q-80,120 -70,160 L70,160 Q80,120 60,90 Q0,100 -60,90Z" fill="url(#dress)"/>
+    <!-- Dress collar detail -->
+    <path d="M-30,90 Q0,105 30,90" stroke="#a78bfa" stroke-width="2" fill="none"/>
+
+    <!-- Necklace -->
+    <path d="M-20,88 Q0,98 20,88" stroke="#fcd34d" stroke-width="2" fill="none"/>
+    <circle cx="0" cy="96" r="4" fill="#fcd34d"/>
+  </g>
+
+  <!-- Bottom fade -->
+  <rect x="0" y="340" width="400" height="60" fill="url(#bg)" opacity="0.5"/>
+</svg>
