@@ -39,8 +39,13 @@ export default function RootLayout({
           </div>
         </nav>
         <main className="flex-1">{children}</main>
-        <footer className="text-center py-6 text-sm opacity-50 border-t border-purple-900/30">
-          <p>🌸 永雛塔菲 🧪 東雪蓮 — 粉絲非官方製作 · 2026</p>
+        <footer className="text-center py-6 text-sm opacity-50 border-t border-purple-900/30 space-y-1">
+          <p>🌸 東雪蓮 🧪 永雛塔菲 — 粉絲非官方製作 · 2026</p>
+          <p>
+            <a href="https://github.com/bennytsai1234/openclaw-blog" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-opacity">📝 部落格</a>
+            {" · "}
+            <a href="https://github.com/bennytsai1234/seren-vs-taffy" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-opacity">⭐ GitHub</a>
+          </p>
         </footer>
       </body>
     </html>
