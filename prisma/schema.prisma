@@ -1,0 +1,40 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model QuizResult {
+  id        String   @id @default(cuid())
+  type      String   // 'seren' | 'taffy' | 'both'
+  createdAt DateTime @default(now())
+}
+
+model Vote {
+  id        String   @id @default(cuid())
+  battleId  String   // '直播有趣' | '歌唱' | '粉絲熱情'
+  choice    String   // 'seren' | 'taffy'
+  visitorId String   // cookie hash
+  createdAt DateTime @default(now())
+}
+
+model Nomination {
+  id        String   @id @default(cuid())
+  character String   // 'seren' | 'taffy'
+  quote     String
+  source    String
+  submitter String
+  votes     Int      @default(0)
+  createdAt DateTime @default(now())
+}
+
+model GameScore {
+  id        String   @id @default(cuid())
+  game      String   // 'seren' | 'taffy'
+  playerName String
+  score     Int
+  createdAt DateTime @default(now())
+}

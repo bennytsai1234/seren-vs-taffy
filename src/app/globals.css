@@ -1,26 +1,61 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --seren-primary: #7c3aed;
+  --seren-secondary: #3b82f6;
+  --taffy-primary: #f59e0b;
+  --taffy-secondary: #ef4444;
+  --bg-dark: #0f0a1a;
+  --bg-light: #f8f6ff;
+  --text-dark: #f0e8ff;
+  --text-light: #1a1625;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-seren: #7c3aed;
+  --color-seren-light: #a78bfa;
+  --color-taffy: #f59e0b;
+  --color-taffy-light: #fcd34d;
+  --color-bg-dark: #0f0a1a;
+  --color-bg-light: #f8f6ff;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans JP", sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-dark);
+  min-height: 100vh;
+}
+
+.font-display {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 900;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes vs-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px) rotate(-2deg); }
+  75% { transform: translateX(4px) rotate(2deg); }
+}
+
+.animate-vs-shake {
+  animation: vs-shake 0.5s ease-in-out infinite;
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.4s ease-out forwards;
 }
