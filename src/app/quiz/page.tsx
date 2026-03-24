@@ -173,9 +173,9 @@ export default function QuizPage() {
         <div className="text-center animate-slide-up relative z-10">
           <div className={`inline-block mb-4 p-4 rounded-3xl bg-gradient-to-br ${result.color}`}>
             {result.type === "seren" ? (
-              <img src="/images/seren-character.svg" alt="東雪蓮" className="w-40 h-40 object-contain" />
+              <img src="/images/seren-portrait.png" alt="東雪蓮" className="w-40 h-48 object-contain rounded-xl" style={{objectPosition: "top"}} />
             ) : result.type === "taffy" ? (
-              <img src="/images/taffy-character.svg" alt="永雛塔菲" className="w-40 h-40 object-contain" />
+              <img src="/images/taffy-portrait.png" alt="永雛塔菲" className="w-40 h-48 object-contain rounded-xl" style={{objectPosition: "top"}} />
             ) : (
               <img src="/images/hero-vs.svg" alt="両辺" className="w-40 h-40 object-contain" />
             )}

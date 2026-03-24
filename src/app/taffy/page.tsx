@@ -3,7 +3,12 @@ export default function TaffyPage() {
     <div className="min-h-[80vh] px-4 py-16 max-w-3xl mx-auto">
       <div className="text-center mb-10">
         <div className="relative inline-block mb-4">
-          <img src="/images/taffy-character.svg" alt="永雛塔菲" className="w-52 h-52 object-contain mx-auto" />
+          <img
+            src="/images/taffy-portrait.png"
+            alt="永雛塔菲"
+            className="w-64 h-80 object-contain mx-auto rounded-2xl"
+            style={{ objectPosition: "top" }}
+          />
         </div>
         <h1 className="text-5xl font-black text-[#f59e0b] mb-2">永雛塔菲</h1>
         <p className="text-lg opacity-60">Ace Taffy · 王牌發明家</p>

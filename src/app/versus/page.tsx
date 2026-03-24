@@ -88,15 +88,15 @@ export default function VersusPage() {
       {/* VS Header with character images */}
       <div className="grid grid-cols-3 gap-4 mb-8 items-center">
         <div className="text-right">
-          <img src="/images/seren-character.svg" alt="東雪蓮" className="w-24 h-24 object-contain mx-auto" />
-          <div className="font-black text-[#a78bfa] mt-1">東雪蓮</div>
+          <img src="/images/seren-avatar.png" alt="東雪蓮" className="w-28 h-28 object-contain mx-auto rounded-full border-4 border-[#7c3aed]" />
+          <div className="font-black text-[#a78bfa] mt-2">東雪蓮</div>
         </div>
         <div className="text-center">
           <div className="text-4xl font-black text-yellow-400 animate-vs-shake">⚡ VS ⚡</div>
         </div>
         <div className="text-left">
-          <img src="/images/taffy-character.svg" alt="永雛塔菲" className="w-24 h-24 object-contain mx-auto" />
-          <div className="font-black text-[#f59e0b] mt-1">永雛塔菲</div>
+          <img src="/images/taffy-avatar.png" alt="永雛塔菲" className="w-28 h-28 object-contain mx-auto rounded-full border-4 border-[#f59e0b]" />
+          <div className="font-black text-[#f59e0b] mt-2">永雛塔菲</div>
         </div>
       </div>
 

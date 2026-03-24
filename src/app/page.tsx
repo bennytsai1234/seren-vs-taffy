@@ -42,9 +42,9 @@ export default function Home() {
           {/* 雪蓮 */}
           <Link href="/quiz" className="group block">
             <div className="relative rounded-3xl overflow-hidden border-2 border-transparent hover:border-[#7c3aed] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_60px_rgba(124,58,237,0.4)]">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#7c3aed]/80 to-[#3b82f6]/80" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#7c3aed]/60 to-[#3b82f6]/80" />
               <div className="relative p-8 text-center">
-                <img src="/images/seren-character.svg" alt="東雪蓮" className="w-32 h-32 mx-auto mb-4 object-contain" />
+                <img src="/images/seren-avatar.png" alt="東雪蓮" className="w-36 h-36 mx-auto mb-4 object-contain rounded-full border-4 border-white/20" />
                 <h2 className="text-2xl font-black mb-1">東雪蓮</h2>
                 <p className="text-sm opacity-80 mb-3">清楚吸血鬼歌姬 · Blanche Fleur</p>
                 <div className="inline-block bg-white/20 rounded-full px-4 py-1 text-sm backdrop-blur-sm">
@@ -57,9 +57,9 @@ export default function Home() {
           {/* 塔菲 */}
           <Link href="/battle" className="group block">
             <div className="relative rounded-3xl overflow-hidden border-2 border-transparent hover:border-[#f59e0b] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_60px_rgba(245,158,11,0.4)]">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#f59e0b]/80 to-[#ef4444]/80" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#f59e0b]/60 to-[#ef4444]/80" />
               <div className="relative p-8 text-center">
-                <img src="/images/taffy-character.svg" alt="永雛塔菲" className="w-32 h-32 mx-auto mb-4 object-contain" />
+                <img src="/images/taffy-avatar.png" alt="永雛塔菲" className="w-36 h-36 mx-auto mb-4 object-contain rounded-full border-4 border-white/20" />
                 <h2 className="text-2xl font-black mb-1">永雛塔菲</h2>
                 <p className="text-sm opacity-80 mb-3">王牌發明家 · 個人勢</p>
                 <div className="inline-block bg-white/20 rounded-full px-4 py-1 text-sm backdrop-blur-sm">
