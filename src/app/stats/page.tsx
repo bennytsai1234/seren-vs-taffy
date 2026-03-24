@@ -95,6 +95,14 @@ export default function StatsPage() {
             >
               參加測驗 →
             </a>
+            <a
+              href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(`兩邊粉絲投票結果出爐了！🦇 ${serenPct}% vs 🧪 ${taffyPct}%！快來看看：${typeof window !== "undefined" ? window.location.href : ""}`)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-4 ml-2 px-6 py-3 rounded-full bg-[#1da1f2] font-bold hover:opacity-90 transition-opacity"
+            >
+              分享結果
+            </a>
           </div>
         </>
       )}
