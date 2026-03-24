@@ -6,6 +6,12 @@ export const metadata: Metadata = {
   description: "你是雪蓮派還是塔菲派？測驗、投票、遊戲，這裡是兩邊粉絲的樂園！",
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
